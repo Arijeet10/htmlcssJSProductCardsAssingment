@@ -166,10 +166,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: start;
-  gap: 30px;
+  gap: 10px;
   font-size: 1rem;
+  overflow: hidden;
   text-overflow: ellipsis;
   text-wrap: nowrap;
+  font-weight: 600;
 }
 
 /* Product Price */
