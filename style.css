@@ -1,0 +1,382 @@
+@import url("https://fonts.google.com/specimen/Inter");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Inter;
+  font-size: 16px;
+}
+
+/* Root Container of Clothing Section */
+.clothing-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+/* Heading Text */
+#heading {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3rem;
+}
+
+/* Product category */
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  font-size: 1.5rem;
+}
+
+.category > * {
+  color: black;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width:300px;
+  cursor: pointer;
+}
+
+.category > div:first-child {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* category logo */
+.category-logo {
+  width: 20px;
+  height: 20px;
+
+}
+
+.category>div:not(:first-child)>img{
+  display:none;
+}
+
+/* Product Category Card Container style */
+.card-container {
+  position: relative;
+  width: 100vw;
+  margin:0px 20px;
+}
+
+.card-container > * {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100vw;
+  margin:0px 20px;
+}
+
+.card-container > *:not(:first-child) {
+  display: none;
+}
+
+.card-container > *:not(:first-child) > img {
+  display: none;
+}
+
+/* Product Card Container*/
+.product-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+/* Product Image container */
+.product-card > div:first-child {
+  width: 100%;
+  height: 70%;
+  position: relative;
+}
+
+/* Product Image */
+.product-img {
+  width: 300px;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.badge-text {
+  background-color: #ffffff;
+  color: #000000;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  font-size: 1rem;
+  cursor: pointer;
+
+}
+
+/* Product Category Card Title and Vendor container */
+.title-vendor-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  width: 100%;
+  height: 10%;
+  padding-right: 15px;
+}
+
+/* Product Title */
+.title-vendor-container > div:first-child {
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  overflow: hidden;
+  width: 60%;
+  font-size: 1.5rem;
+}
+
+.title-vendor-container > div:nth-child(2) {
+  background-color: black;
+  width: 5px;
+  height: 5px;
+  border-radius: 9999px;
+}
+
+/* Product Vendor */
+.title-vendor-container > div:last-child {
+  transform: translateY(5px);
+  font-size: 1rem;
+}
+
+/* Product Card Price Compare Discount container */
+.product-price-discount {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 30px;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+
+/* Product Price */
+.product-price-discount > div:first-child {
+}
+
+/* Compare price at container */
+.product-price-discount > div:nth-child(2) {
+  position: relative;
+}
+
+.product-price-discount > div:nth-child(2) > div:first-child {
+  text-align: center;
+  color: #8f8f8f;
+}
+
+.product-price-discount > div:nth-child(2) > div:last-child {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  border-top: 1px solid #8f8f8f;
+}
+
+/* Discount */
+.product-price-discount > div:last-child {
+  color: #ff3737;
+  padding: 2px;
+}
+
+/* Add to Cart button container */
+.btn-container {
+  width: 100%;
+  height: 10%;
+}
+
+/* Add to Cart button */
+.btn-addtocart {
+  padding: 4px 8px;
+  border: 0px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  background: #000000;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+}
+
+/* Mobile Screens */
+@media (max-width: 767px) {
+  #heading {
+    font-size: 1.5rem;
+  }
+
+  /* Product category */
+  .category {
+    font-size: 1rem;
+    width: 80vw;
+
+  }
+
+  .category > * {
+    padding: 10px 30px;
+
+  }
+
+  .card-container > * {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    width: 100vw;
+    margin:0px 10px;
+  }
+
+  /* Product Card Container*/
+.product-card {
+  width: 100vw;
+  height: 100%;
+}
+
+/* Product Image */
+.product-img {
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+  object-position: 0px -10px;
+}
+
+  .badge-text {
+    top:10px;
+    left:20px;
+    font-size: 1rem;
+  }
+
+  .title-vendor-container > div:nth-child(2) {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Product Vendor */
+.title-vendor-container > div:last-child {
+  font-size: 1rem;
+}
+
+  /* Product Title */
+.title-vendor-container > div:first-child {
+  width:50%;
+  font-size: 1.5rem;
+}
+
+  /* Product Card Price Compare Discount container */
+.product-price-discount {
+  font-size: 1rem;
+}
+
+  /* Add to Cart button */
+.btn-addtocart {
+  padding: 4px 8px;
+  font-size: 1rem;
+}
+}
+
+/* Tablet Screens */
+@media (min-width: 768px) and (max-width:1024px) {
+
+
+  #heading {
+    font-size: 2rem;
+  }
+
+  /* Product category */
+  .category {
+    font-size: 1.5rem;
+    width: 80vw;
+    
+  }
+
+  .category > * {
+    padding: 10px 20px;
+    width:100%;
+  }
+
+  /* Product Category Card Container */
+  .card-container > * {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: auto auto;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    width: 100vw;
+    margin:0px 10px;
+
+  }
+
+  /* Product Card Container*/
+.product-card {
+  width: 350px;
+}
+
+/* Product Image */
+.product-img {
+  object-fit: cover;
+  object-position: 0px -1px;
+  width: 100%;
+}
+
+  .badge-text {
+    top:10px;
+    left:20px;
+    font-size: 1.2rem;
+  }
+
+  .title-vendor-container > div:nth-child(2) {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Product Vendor */
+.title-vendor-container > div:last-child {
+  font-size: 1.3rem;
+}
+
+  /* Product Title */
+.title-vendor-container > div:first-child {
+  width:50%;
+  font-size: 1.5rem;
+}
+
+  /* Product Card Price Compare Discount container */
+.product-price-discount {
+  font-size: 1.3rem;
+}
+
+  /* Add to Cart button */
+.btn-addtocart {
+  padding: 4px 8px;
+  font-size: 1.5rem;
+}
+
+
+}
+
