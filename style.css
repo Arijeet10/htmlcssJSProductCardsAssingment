@@ -51,6 +51,7 @@ body {
   gap: 10px;
   width:300px;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .category > div:first-child {
@@ -130,6 +131,7 @@ body {
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   font-size: 1rem;
   cursor: pointer;
+  font-weight: 600;
 
 }
 
@@ -151,6 +153,7 @@ body {
   overflow: hidden;
   width: 60%;
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .title-vendor-container > div:nth-child(2) {
@@ -181,6 +184,7 @@ body {
 
 /* Product Price */
 .product-price-discount > div:first-child {
+
 }
 
 /* Compare price at container */
@@ -222,6 +226,7 @@ body {
   color: #ffffff;
   background: #000000;
   font-size: 1.5rem;
+  font-weight: 600;
   cursor: pointer;
 
 }

@@ -36,11 +36,11 @@ fetchApiData()
       
 
       if (item.category_name == "Men") {
-        productCategoryLogo.src = "./assets/menLogo.svg";
+        productCategoryLogo.src = "./assets/men.svg";
       } else if (item.category_name == "Women") {
-        productCategoryLogo.src = "./assets/womenLogo.svg";
+        productCategoryLogo.src = "./assets/women.svg";
       } else {
-        productCategoryLogo.src = "./assets/childLogo.svg";
+        productCategoryLogo.src = "./assets/kid.svg";
       }
 
       productCategoryLogo.alt="logo"
